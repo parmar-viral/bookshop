@@ -1,0 +1,178 @@
+/* General styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* Ensure full height */
+}
+
+/* Sidebar styles */
+#sidebar-wrapper {
+    background-color: #343a40;
+    color: white;
+    width: 250px;
+    position: fixed;
+    height: 100vh; /* Full height of the viewport */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure sidebar stays on top */
+    padding-top: 20px;
+    overflow-y: auto; /* Enable scrolling if sidebar content overflows */
+}
+
+.sidebar-heading {
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #212529;
+    color: #fff;
+}
+
+/* List group styles */
+.list-group {
+    width: 100%;
+    padding: 0;
+}
+
+.list-group-item {
+    background-color: #343a40; /* Same as sidebar-wrapper */
+    color: white;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show "..." if text is too long */
+}
+
+/* Ensure consistent background on hover */
+.list-group-item:hover, 
+.list-group-item-action:focus, 
+.list-group-item-action:hover {
+    background-color: #495057; /* Slightly lighter shade for hover */
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Page Content styles */
+#page-content-wrapper {
+    flex: 1;
+    margin-left: 250px; /* Adjust content to sidebar width */
+    background-color: #f8f9fa;
+    padding: 2rem;
+    width: calc(100% - 250px); /* Ensures content fills remaining space */
+}
+
+h3 {
+    color: #343a40;
+    font-size: 2rem;
+}
+
+.alert {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Card styles */
+.card {
+    border: 1px solid #343a40;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for card */
+    overflow: hidden; /* Ensure image doesn't overflow */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    width: 100%; /* Ensure image fills the width of the card */
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #003366;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Button styles */
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Row for book display */
+.row {
+    margin: 0; /* Remove default margin for the row */
+}
+
+.col-lg-4, .col-md-6 {
+    display: flex;
+    justify-content: center; /* Center the card within the column */
+}
+
+/* Responsive Design for Cards */
+@media (max-width: 1200px) {
+    .col-lg-4 {
+        flex-basis: 33.33%; /* 3 cards on large screens (>=1200px) */
+        max-width: 33.33%;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-md-6 {
+        flex-basis: 50%; /* 2 cards on medium screens (>=992px) */
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex-basis: 100%; /* Stack cards on smaller screens */
+        max-width: 100%; /* Full width on small devices */
+    }
+}
+
+/* Responsive Form Styles */
+@media (max-width: 576px) {
+    .card {
+        margin: 10px; /* Margin for smaller screens */
+    }
+
+    .form-group {
+        margin-bottom: 1rem; /* Reduce margin for form groups */
+    }
+
+    button {
+        width: 100%; /* Full width button */
+    }
+}

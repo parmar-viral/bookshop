@@ -1,0 +1,331 @@
+/* Import Bootstrap Icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f4f7f6, #e1ebee);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container for login and registration forms */
+.container {
+    max-width: 800px; /* Set a maximum width for the main container */
+    margin: 40px auto; /* Center the container with auto margins */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Query for Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Use 90% width on smaller screens */
+    }
+}
+
+/* Header Styles */
+h1, h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #003366;
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: #003366;
+    text-align: center;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #343a40; /* Set background color same as footer */
+    padding: 10px 20px;
+}
+
+.navbar-collapse {
+    display: flex; /* Display all items as flex on larger screens */
+    flex-direction: row; /* Align items in a row */
+}
+
+/* Collapsed state for smaller screens */
+.navbar-collapse.collapsing {
+    display: none; /* Hide when collapsing */
+}
+
+.navbar-toggler {
+    background-color: #007bff; /* Change color if needed */
+    border: none; /* Remove border */
+}
+
+/* Adjusting menu items for better spacing */
+.navbar a {
+    color: #fff; /* Change text color for contrast */
+    font-size: 1.2rem;
+    margin-right: 20px;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* Styles for logo */
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        display: none; /* Hide by default on small screens */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .navbar-collapse.show {
+        display: flex; /* Show when toggled */
+    }
+
+    .navbar a {
+        margin-right: 0; /* Remove margin for smaller screens */
+        display: block; /* Display links as block */
+    }
+
+    .navbar-toggler {
+        display: inline-block; /* Ensure it displays */
+    }
+}
+
+/* Ensure all menu items are displayed on larger screens */
+@media (min-width: 769px) {
+    .navbar-collapse {
+        display: flex !important; /* Ensure it shows as flex for larger screens */
+    }
+
+    .navbar-collapse.show {
+        display: flex; /* Show as flex when toggled */
+    }
+
+    .navbar a {
+        margin-right: 20px; /* Keep spacing */
+    }
+}
+
+/* Cards */
+.card {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: #003366;
+}
+
+.card-text {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Home Page - Product Display */
+.product-grid {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Space between items */
+}
+
+/* Each product item */
+.product-item {
+    flex: 1 1 30%; /* Grow to fill space but not less than 30% */
+    max-width: 30%; /* Prevent it from growing too large */
+}
+
+/* Make sure full-width on smaller screens */
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 100%; /* Full width on small screens */
+        max-width: 100%;
+    }
+}
+
+/* Contact Form Styles */
+.container {
+    margin-top: 50px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #003366; /* Match header color */
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn {
+    width: 100%; /* Full width for button */
+}
+
+.text-center {
+    margin-top: 20px;
+}
+
+/* About Us Section */
+.about-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.about-section h1 {
+    color: #003366;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-section h2 {
+    color: #003366;
+    font-size: 1.75rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.about-section ul li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* For smaller devices */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 20px;
+    }
+
+    .about-section h1 {
+        font-size: 2rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-section p, .about-section ul li {
+        font-size: 1rem;
+    }
+}
+/* Make the image fit the card without distortion */
+.glass-card img {
+    width: 100%;          /* Image will take the full width of the card */
+    height: auto;         /* Height will adjust to maintain aspect ratio */
+    object-fit: cover;    /* Ensures the image covers the card while maintaining aspect ratio */
+    max-height: 200px;    /* Optional: Limit maximum height if needed */
+    border-radius: 5px;   /* Optional: Add rounded corners to the image */
+}
